@@ -36,4 +36,17 @@ class Fighter {
     public int getDefence() {
         return m_abilities[Ability.DEFENCE.ordinal()];
     }
+    
+    public double averageOfAbilities() {
+        return sumOfAbilities() * m_abilities.length;
+    }
+
+    public int sumOfAbilities() {
+        int sum = 0;
+
+        for (int ability : m_abilities)
+            sum += ability;
+
+        return sum;
+    }
 }
