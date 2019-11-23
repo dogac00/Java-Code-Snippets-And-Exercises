@@ -1,7 +1,7 @@
 
-class IterableString implements Iterable<Character> {
+class IterableString implements Iterable<Character>, CharSequence {
     private String m_string;
-    
+
     public IterableString(String string) {
         this.m_string = string;
     }
@@ -21,5 +21,20 @@ class IterableString implements Iterable<Character> {
                 return m_string.charAt(m_currentIndex++);
             }
         };
+    }
+
+    @Override
+    public int length() {
+        return m_string.length();
+    }
+
+    @Override
+    public char charAt(int i) {
+        return m_string.charAt(i);
+    }
+
+    @Override
+    public CharSequence subSequence(int i, int j) {
+        return m_string.subSequence(i, j);
     }
 }
