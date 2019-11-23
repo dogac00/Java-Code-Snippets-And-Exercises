@@ -1,5 +1,5 @@
 
-// From Apple Source Code
+// I translated from Apple Source Code
 
 class Util {
     public static int abs(int x) {
