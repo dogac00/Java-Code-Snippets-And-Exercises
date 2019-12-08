@@ -1,7 +1,7 @@
 
 final class Student {
-    private int m_age;
-    private String m_name;
+    private final int m_age;
+    private final String m_name;
 
     public Student(int age, String name) {
         m_age = age;
