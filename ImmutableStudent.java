@@ -23,7 +23,18 @@ final class Student {
 
     @Override
     public int hashCode() {
-        return 31 * m_age * m_name.hashCode();
+        int result = 37; // prime
+
+        result *= 397; // also prime
+
+        result ^= m_age;
+
+        result *= 397;
+
+        if (m_name != null)
+            result ^= m_name.hashCode();
+
+        return result;
     }
 
     @Override
