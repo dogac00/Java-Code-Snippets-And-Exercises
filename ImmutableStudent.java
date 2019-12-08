@@ -39,13 +39,15 @@ final class Student {
 
     @Override
     public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
         if (obj == null)
             return false;
         if (!(obj instanceof Student))
             return false;
 
-        Student student = (Student) obj;
+        Student other = (Student) obj;
 
-        return this.m_age == student.m_age && Objects.equals(this.m_name, student.m_name);
+        return this.m_age == other.m_age && Objects.equals(this.m_name, other.m_name);
     }
 }
