@@ -12,7 +12,7 @@ public class App {
         for (int i = 1; i < bigDecimals.length; i++)
             result = result.max(bigDecimals[i]);
 
-        return null;
+        return result;
     }
 
     private static BigDecimal min(BigDecimal [] bigDecimals)
@@ -22,6 +22,6 @@ public class App {
         for (int i = 1; i < bigDecimals.length; i++)
             result = result.min(bigDecimals[i]);
 
-        return null;
+        return result;
     }
 }
