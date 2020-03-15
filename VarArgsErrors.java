@@ -5,13 +5,23 @@ public class App
         
     }
     
-    private static void display(double... a, int... b) // Error 
+    private static void foo(double... a, int... b) // Error 
     {
         
     }
 
-    private static void display(short... a, int b) // Error 
+    private static void bar(short... a, int b) // Error 
     {
 
+    }
+    
+    private static void zar(int... ... val) // Error
+    {
+
+    }
+    
+    private static void tar(int[]... val) // Valid
+    {
+        
     }
 }
